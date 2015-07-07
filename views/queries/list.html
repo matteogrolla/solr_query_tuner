@@ -1,0 +1,16 @@
+<table class="table" >
+  <thead>
+    <tr>
+      <th>Query Name</th>
+      <th>Target Docs</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tr ng-repeat="query in queries">        
+    <td ><a ng-href="queries2">{{query.id}} - {{query.userQuery}}</a></td>
+    <td ng-bind="query.targetDocs"></td>
+    <td ng-bind="query.score"></td>
+  </tr>
+</table>
+</div>
+
