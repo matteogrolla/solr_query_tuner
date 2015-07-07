@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tr ng-repeat="query in queries">        
-    <td ><a ng-href="queries2">{{query.id}} - {{query.userQuery}}</a></td>
+    <td ><a ng-href="queries/{{query.id}}">{{query.id}} - {{query.userQuery}}</a></td>
     <td ng-bind="query.targetDocs"></td>
     <td ng-bind="query.score"></td>
   </tr>
