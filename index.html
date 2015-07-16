@@ -20,36 +20,41 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular-route.js"></script>
   </head>
-  <body ng-app="app">
-    <a href="detail">detail</a>
-    <p> the number {{3+4}} </p>
+  <body ng-app="app">    
 
-    <script src="module.js"></script>
+    <script src="module.js"></script>  
 
-    <p ng-controller="MessageController">
-      Message: {{message}}
-    </p>
+    
 
-    <div class="container">
+    <div class="container">      
 
-      <div  ng-init="qty=1;cost=2">
-        <b>Invoice:</b>
-        <div>
-          Quantity: <input type="number" min="0" ng-model="qty">
-        </div>
-        <div>
-          Costs: <input type="number" min="0" ng-model="cost">
-        </div>
-        <div>
-          <b>Total:</b> {{qty * cost | currency}}
-        </div>
-      </div>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Solr Query Tuner</a>
+          </div>
 
-      <div class="page-header">
-        <h1>Solr Query Tuner</h1>
-      </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a ng-href="queries">Queries <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      
 
       <div ng-view></div>
+
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

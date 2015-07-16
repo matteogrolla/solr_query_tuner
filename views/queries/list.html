@@ -3,14 +3,24 @@
     <tr>
       <th>Query Name</th>
       <th>Target Docs</th>
-      <th>Score</th>
+      <th>Target Ranks</th>
+      <th>Precision At</th>
+      <th>Reciprocal Rank At</th>
     </tr>
   </thead>
   <tr ng-repeat="query in queries">        
     <td ><a ng-href="queries/{{query.id}}">{{query.id}} - {{query.userQuery}}</a></td>
     <td ng-bind="query.targetDocs"></td>
-    <td ng-bind="query.score"></td>
+    <td ng-bind="query.targetRanks"></td>
+    <td ng-bind="query.precisionAt"></td>
+    <td ng-bind="query.reciprocalRankAt"></td>
+    <td><buttom type="button" class="btn btn-xs btn-danger" ng-click="deleteRow(query.id)">Delete row</buttom></td>
   </tr>
 </table>
+<buttom type="button" class="btn btn-xs btn-success" ng-click="addRow()">Add row</buttom>
+<div>
+  Mean Precision At : {{meanPrecisionAt}}<br>
+  Mean Reciprocal Rank: {{meanReciprocalRankAt}}
 </div>
+
 
